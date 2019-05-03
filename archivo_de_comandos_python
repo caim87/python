@@ -1,0 +1,100 @@
+Python
+
+n1 = float (input ("introduce el primer numero"))   		###################	toma números de usuario y usa operadores para saber si son diferentes
+n2 = float (input ("introduce el numero dos"))
+print ("son differentes?”, n1 != n2)
+
+cadena = input ("introduzca cadena: ")					###################	Valida la longitud de la cadena
+condiciones = len(cadena) >= 3 and len(cadena) < 10
+print ("la longitud de la cadena es mayor o igual que 3 y menor que 10", condiciones)
+
+numero_magico = 12345679							###################	toma un numero y lo multiplica por 9 con el *= 9, osea el valor ingresado lo multiplica por 9 
+numero_usuario = int (input ("introduce numero del 1 al 9: "))
+numero_usuario *= 9
+numero_magico *= numero_usuario
+print ("el numero magico es: ", numero_magico)
+
+cadena = "prueba de texto"
+cadena2 = ""
+cadena3 = "test "
+for caracter in cadena: 								##################		 el "caracter" es cada letra en la cadena y es una variable cualquiera
+    cadena2 += "*" 									##################		aca le suma un asterisco a la cadena2 respecto a la "cadena" osea quedaria igual de campos pero con *
+    cadena3 += caracter *2 							################## 	aca coje cada caracter dentro de la cadena y la hace doble por la multiplicacacion por 2 mas el test al principio
+print (cadena)
+print (cadena2)
+print (cadena3)
+
+numeros = [1,2,3,4,4,6,7,7,9,10,11]						#################		Funcion enumerate
+for indice,e in enumerate(numeros):
+    numeros[indice] *=10
+numeros
+
+n1 = float (input ("please add the first number"))			################## Este es un programa donde se decide que hacer dependiendo de lo que se ingrese
+n2 = float ((input ("plese add the second number")))
+value = input ("""que desea hacer
+               1. Sumar
+               2. Restar
+               3. Multiplicar""")
+if value == "Sumar":
+               total = n1+n2
+               print ("valor final", total)
+elif value == "Restar":
+               total = n1-n2
+               print ("valor final", total)
+elif value == "Multiplicar":
+               total = n1*n2
+               print ("valor final", total)
+else:
+    print ("Valor no reconocido")
+
+suma = sum (range (0,101,2))							###################	es una suma con un range (incio, fin,salto) es una matriz de 100 numeroso que salta cada 2 y me daria todos los PARES
+print (suma)
+list (range (1,6,2))									###################	Una lista credo con un range de 1 a 6 y salta de a dos osea me daria los IMPARES
+
+numeros= int (input ("introduzca la cantidad de numeros que quiere"))	########
+suma = 0
+for x in range(numeros):
+    suma += float (input ("introduce el numero"))
+print ("se han introducido", numeros, "numeros y la suma es", suma, "y su media es", suma/numeros)
+
+lista_1 = ["h",'o','l','a',' ', 'm','u','n','d','o']					#######	de las dos listas generar una tercera con los elemtos que se repiten entre ellas pero no debe repetirse ningún elemento en la nueva lista
+lista_2 = ["h",'o','l','a',' ', 'l','u','n','a']
+
+lista_3 = []
+
+for letra in lista_1:
+    if letra in lista_2 and letra not in lista_3:
+        lista_3.append(letra)
+print (lista_3)
+
+tupla = (0,345,56,[1,5,6,7],7) 							#########	Se crea una tupla que es como una lista pero no se puede modificar, NOTA: como no se puede modificar no tiene la función APPEND
+tupla [-1]											#########	Muestra el ultimo campo de la tupla como en la listas
+tupla [2:]											#########	Muestra desde el indice 2 en adelante como en las listas
+tupla.count(345)									#########	Busca en la tupla y dice cuantas veces esta lo que busques, en este caso el “345”
+len (tupla [3])										#########	Muestra la longitud de la tupla en este caso la del indice 3 que es otra lista [1,5,6,7], pero tambien puede ser toda la tupla “len (tupla)”
+tupla [3] [1]										#########	Como en la tupla el indice 3 tiene una lista puedes ver que hay en el indice 1 de esa lista que se encuentra en la tupla
+tupla.index (345)									#########	Ves en que indice se encuentra ese valor exacto que se busco también se puede buscar una lista pero debe ser igual asi “([1,5,6,7])”
+tupla [3].index(7)									#########	Busca en la tupla en el indice 3 que en este caso es un lista y pregunto en que indice esta el valor 7, el cual esta en el 3
+
+conjunto = {1,2,3}									#########	Crear un conjunto con las llaves {}
+conjunto.add(0)									#########	Agrega el valor de forma random al conjunto
+conjunto.add('h')
+conjunto.add('A')
+grupo = {'carlos', 'camilo','mario'}						#########	Tambien se puede hace con texto 
+'camilo' in grupo									#########	Y se puede buscar dentro del conjunto llamado grupo
+
+lista = [1,2,2,3,3,4,5,5]
+cambioagrupo = set (lista)							#########	Para cambiar de una lista aun grupo es con set y los conjuntos no dejan valores repetidos
+print (cambioagrupo)
+cambioalist = list (cambioagrupo)						#########	Se cambia de un grupo a una lista
+print (cambioalist)
+listanueva = list(set(lista))
+print (listanueva)
+
+s = (3,45,67,678,78,45,67,3,3,3,3)						#########	Aca se crea una lista y se transforma a conjunto con el set y ese grupo despues se pasa a lista con el “list”
+a = set (s)
+print (a)
+l = list (a)
+print (l)
+
+
