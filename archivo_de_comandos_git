@@ -1,0 +1,11 @@
+GIt commands
+
+git init									#########			Se usa para inicializar un folder y poder empezar a trabajar un proyecto de 0
+git status									#########			Muestra el estado del git, si tengo archivos nuevos por agregar ya sea que no estén en stage o si
+git add -A								#########			Agrega todos los archivos que tenga en la carpeta donde me encuentro a stage
+git commit -m “comentario”					#########			envia mis cambios de stage a master en mi mismo branch
+git remote -v								#########			Me muestra si tengo ligado algún repositorio como bitbucket o GitHub
+git remote add origin https://repositorioengit	#########			ligo mi repository con el de bitbucket o GitHub
+Git push	origin master						#########			Envio mis cambios al branch master de repositorio en bitbucket o GitHub
+git config --list							#########			Veo la configuración que tengo en mi git como el correo y el nombre usuario que asigne
+
